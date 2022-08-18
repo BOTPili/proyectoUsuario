@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8F5F2"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".activitys.ActivityHome">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/linear_text_top"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toTopOf="@id/linear_text_user"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <EditText
+                    android:id="@+id/et_direction"
+                    android:layout_width="238dp"
+                    android:layout_height="30dp"
+                    android:alpha="0.2"
+                    android:autofillHints="postalAddress"
+                    android:background="@drawable/ed_home_direction"
+                    android:fontFamily="@font/poppins_medium"
+                    android:hint="@string/ingrese_su_direcci_n"
+                    android:inputType="textPostalAddress"
+                    android:textColor="#7E7E7E"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toTopOf="@id/rvHome"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
+
+                <ImageView
+                    android:id="@+id/bell_home"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_marginStart="70dp"
+                    android:background="@drawable/icon_bell_home"
+                    android:contentDescription="@string/image"
+                    android:padding="8dp"
+                    android:src="@drawable/bell_16px"
+                    app:layout_constraintBottom_toTopOf="@id/rvHome"
+                    app:layout_constraintLeft_toRightOf="@id/et_direction"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_text_user"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="@id/include_btn_top"
+                app:layout_constraintTop_toBottomOf="@id/linear_text_top">
+
+                <TextView
+                    android:id="@+id/name_user"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="@string/NombeUserHome"
+                    android:textColor="@color/text_bold"
+                    android:textSize="30sp"
+                    app:layout_constraintBottom_toTopOf="@id/rvHome"
+                    app:layout_constraintLeft_toLeftOf="@id/linear_text_top"
+                    app:layout_constraintTop_toBottomOf="@id/linear_text_top" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="@string/qu_te_gustar_a_pedir_hoy"
+                    android:textColor="#7E7E7E"
+                    android:textSize="16sp"
+                    tools:ignore="TextContrastCheck" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/include_btn_top"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toTopOf="@id/title_promos"
+                app:layout_constraintTop_toBottomOf="@id/linear_text_user">
+
+                <include layout="@layout/buttoms_top_home" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/title_promos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toTopOf="@id/rvHome"
+                app:layout_constraintTop_toBottomOf="@id/include_btn_top">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins"
+                    android:text="@string/promociones_del_d_a"
+                    android:textColor="#3E4462"
+                    android:textSize="24sp" />
+
+                <Button
+                    android:id="@+id/btn_ver_mas"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="36dp"
+                    android:backgroundTint="@color/white"
+                    android:fontFamily="@font/poppins"
+                    android:padding="0dp"
+                    android:text="@string/ver_m_s"
+                    android:textAllCaps="false"
+                    android:textColor="#E84C4F"
+                    tools:ignore="TextContrastCheck" />
+            </LinearLayout>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvHome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fadingEdge="horizontal"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/title_promos" />
+
+            <RelativeLayout
+                android:id="@+id/include_btn_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="0dp"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/white" />
+
+                <include layout="@layout/buttoms_bottom_home" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
+

@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">proyectoUsuario</string>
+    <string name="login">Login</string>
+    <string name="bt_login">Login</string>
+    <string name="edt_password">Password</string>
+    <string name="edt_username">Username</string>
+    <string name="username">Username</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="sing_up">Sing Up</string>
+    <string name="welcom_n_user">welcome</string>
+    <string name="welcome">welcome</string>
+    <string name="welcome_n_user">welcome</string>
+    <string name="welcomeText">welcome,\n User !</string>
+    <string name="name_plate">Ensalada de Frutas</string>
+    <string name="description_plate">Deliciosa ensadalada de frutas</string>
+    <string name="type_plate">Apto celiacos</string>
+    <string name="price_plate">$30</string>
+    <string name="NombeUserHome">Hola,User</string>
+    <string name="tv_promos">Promociones del día</string>
+    <string name="favs">Favoritos</string>
+    <string name="promos">Ofertas</string>
+    <string name="trends">Tendencias</string>
+    <string name="more">Más</string>
+    <string name="ingrese_su_direcci_n">Ingrese su dirección</string>
+    <string name="ver_m_s">Ver más</string>
+    <string name="promociones_del_d_a">Promociones del día</string>
+    <string name="qu_te_gustar_a_pedir_hoy">¿Qué te gustaría pedir hoy?</string>
+    <string name="image">image</string>
+    <string name="btn">btn</string>
+    <string name="namePlate" />
+    <string name="usernamelogin">usernameLogin</string>
+    <string name="nombre_plato">Nombre Plato</string>
+    <string name="listaingredientes">
+        - 1 pechuga de pollo a la parrilla
+        - 20 cerezas, sin hueso y en mitades
+        - 1/2 pepino, pelado y cortado en cubitos
+        - 2 aguacates - 1/2 taza de yogur griego
+        - 3-4 cucharadas de miel
+        - 2 cucharadas de mayonesa
+        - una pizca de cilantro
+        - sal de ajo al gusto
+        - pimienta recién molida al gusto
+        - una pizca de eneldo fresco picado
+    </string>
+</resources>

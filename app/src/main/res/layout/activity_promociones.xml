@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/btn_back"
+            android:layout_width="68dp"
+            android:layout_height="68dp"
+            android:backgroundTint="@color/white"
+            android:src="@drawable/line"
+            tools:ignore="SpeakableTextPresentCheck"
+            android:contentDescription="@string/btn" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tv_promos"
+            android:fontFamily="@font/poppins_bold"
+            android:textSize="22sp"
+            android:textColor="#3E4462"
+            android:gravity="center"
+            android:layout_marginTop="15dp"/>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="68dp"
+            android:backgroundTint="@color/white" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvPlate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

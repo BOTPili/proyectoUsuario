@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <ImageButton
+            android:id="@+id/btn_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/home"
+            android:backgroundTint="@color/white"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/btn_bag"
+            style="?android:attr/borderlessButtonStyle"/>
+        <ImageButton
+            android:id="@+id/btn_bag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/shopping_bag"
+            android:backgroundTint="@color/white"
+            app:layout_constraintLeft_toRightOf="@+id/btn_home"
+            app:layout_constraintRight_toLeftOf="@id/btn_search"
+            app:layout_constraintTop_toTopOf="parent"
+            style="?android:attr/borderlessButtonStyle"/>
+        <ImageButton
+            android:id="@+id/btn_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/search_24px"
+            android:backgroundTint="@color/white"
+            app:layout_constraintLeft_toRightOf="@id/btn_bag"
+            app:layout_constraintRight_toLeftOf="@id/btn_user"
+            app:layout_constraintTop_toTopOf="parent"
+            style="?android:attr/borderlessButtonStyle"/>
+        <ImageButton
+            android:id="@+id/btn_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/user_16px"
+            android:backgroundTint="@color/white"
+            app:layout_constraintLeft_toRightOf="@id/btn_search"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            style="?android:attr/borderlessButtonStyle"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>

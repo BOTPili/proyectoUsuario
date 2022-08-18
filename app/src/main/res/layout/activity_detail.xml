@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activitys.ActivityDetail">
+
+
+
+        <LinearLayout
+            android:id="@+id/linear_top_deteail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageButton
+                android:id="@+id/btn_back"
+                android:layout_width="68dp"
+                android:layout_height="68dp"
+                android:backgroundTint="@color/white"
+                android:src="@drawable/line"
+                tools:ignore="SpeakableTextPresentCheck"
+                android:contentDescription="@string/btn" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Fruit Salad Mix"
+                android:fontFamily="@font/poppins"
+                android:textSize="22sp"
+                android:textColor="#3E4462"
+                android:gravity="left"
+                android:layout_marginTop="15dp"/>
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="68dp"
+                android:backgroundTint="@color/white"/>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/linear_image_deteail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@+id/linear_top_deteail">
+
+            <ImageView
+                android:id="@+id/image_detail"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:src="@drawable/assorted_sliced_fruits_in_white_ceramic_bowl_1092730_2" />
+
+            <ImageButton
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/favorite"
+                android:layout_alignParentRight="true"
+                android:layout_alignBottom="@+id/image_detail"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="16dp"/>
+
+        </RelativeLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/titles_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingRight="16dp"
+        android:paddingLeft="16dp"
+        android:paddingTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/linear_image_deteail">
+
+        <TextView
+            android:id="@+id/name_image_deteail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Delicius Salad Fruit"
+            android:textSize="24sp"
+            android:fontFamily="@font/poppins"
+            android:textColor="#3E4462"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$30.00"
+            android:textColor="#3E4462"
+            android:textSize="20sp"
+            android:layout_marginLeft="80dp"
+            app:layout_constraintRight_toRightOf="parent"/>
+        <TextView
+            android:id="@+id/subtitle_deteail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:text="Deliciosa Ensalada"
+            android:fontFamily="@font/poppins_medium"
+            android:textColor="#7E7E7E"
+            app:layout_constraintLeft_toLeftOf="@id/name_image_deteail"
+            app:layout_constraintTop_toBottomOf="@+id/name_image_deteail"/>
+
+        <ImageView
+            android:id="@+id/icon_fav"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/star_16px"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/subtitle_deteail"
+            app:layout_constraintLeft_toLeftOf="@id/subtitle_deteail" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5.0"
+            android:fontFamily="@font/poppins"
+            android:textColor="#3E4462"
+            android:textSize="15dp"
+            app:layout_constraintLeft_toRightOf="@id/icon_fav"
+            app:layout_constraintTop_toBottomOf="@id/subtitle_deteail"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="16dp"/>
+
+        <ImageView
+            android:layout_width="103dp"
+            android:layout_height="20dp"
+            android:src="@drawable/verified"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@id/subtitle_deteail"
+            app:layout_constraintRight_toRightOf="@id/subtitle_deteail"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/titles_details">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="left"
+        android:padding="16dp"
+        app:layout_constraintTop_toBottomOf="@id/titles_details">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ingredientes:"
+            android:textSize="18dp"
+            android:fontFamily="@font/poppins"
+            android:textColor="#3E4462"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
+            android:textColor="#3E4462"
+            android:textSize="16dp"
+            android:text="@string/listaingredientes"/>
+
+
+    </LinearLayout>
+
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
